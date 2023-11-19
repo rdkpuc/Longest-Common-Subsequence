@@ -1,3 +1,7 @@
+// Importa a função do arquivo HandleTXT.js
+const { convertTXTtoString } = require('./HandleTXT');
+
+
 // Função principal para encontrar a Maior Subsequência Comum (LCS)
 function longestCommonSubsequence(text1, text2) {
     let rows = text1.length;
@@ -24,6 +28,10 @@ function longestCommonSubsequence(text1, text2) {
 
     // Exibe a tabela no console (para fins de depuração)
     console.log(dpTable);
+
+    // Teste função convertTXTtoString
+    console.log("\n teste convertTXTtoString: ");
+    convertTXTtoString();
 
     // Chama a função auxiliar para obter a subsequência
     return subSequence(text1, text2, dpTable);
