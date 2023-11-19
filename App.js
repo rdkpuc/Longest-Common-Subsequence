@@ -62,3 +62,7 @@ function subSequence(text1, text2, dpTable) {
 
 // Exemplo de uso
 console.log(longestCommonSubsequence("abc", "cab"));
+
+module.exports = {
+    longestCommonSubsequence,
+};

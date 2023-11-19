@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Strings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formulário de Manipulação de Strings</h2>
+
+    <form id="stringForm">
+        <label for="stringInput1">String 1:</label>
+        <input type="text" id="stringInput1" required>
+
+        <br>
+
+        <label for="stringInput2">String 2:</label>
+        <input type="text" id="stringInput2" required>
+
+        <br>
+
+        <button type="button" onclick="manipularStrings()">Manipular Strings</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script src="./App.js"></script>
+    <script>
+        function manipularStrings() {
+            // Obtém os valores das strings dos campos de entrada
+            const string1 = document.getElementById('stringInput1').value;
+            const string2 = document.getElementById('stringInput2').value;
+
+            // Manipula as strings (por exemplo, concatenação)
+            const resultado = `Resultado: ${string1} ${string2}`;
+
+            // Exibe o resultado na div com id "resultado"
+            document.getElementById('resultado').innerText = resultado;
+
+            // Chama a função do módulo importado
+            longestCommonSubsequence();
+        }
+    </script>
+
+</body>
+</html>
