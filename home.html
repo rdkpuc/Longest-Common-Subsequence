@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,13 @@
             text-align: center;
             margin: 50px;
         }
+
         input {
             margin-bottom: 10px;
         }
     </style>
 </head>
+
 <body>
 
     <h2>Formulário de Manipulação de Strings</h2>
@@ -48,10 +51,16 @@
             // Exibe o resultado na div com id "resultado"
             document.getElementById('resultado').innerText = resultado;
 
-            // Chama a função do módulo importado
-            longestCommonSubsequence();
+            // Chama a função do módulo importado, passando as strings como argumentos
+            const lcsResult = longestCommonSubsequence(string1, string2);
+
+           // Exibe a maior subsequência comum abaixo do botão
+           document.getElementById('resultadoLCS').innerText = `Maior Subsequência Comum: ${lcsResult}`;
         }
+
     </script>
 
+    <div id="resultadoLCS"></div>
 </body>
+
 </html>

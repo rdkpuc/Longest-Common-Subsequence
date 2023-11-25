@@ -1,6 +1,29 @@
-// Importa a função do arquivo HandleTXT.js
-const { convertTXTtoString } = require('./HandleTXT');
+// Importa o módulo 'fs' (file system) do Node.js
+const fs = require('fs').promises; // Importa a versão Promise do módulo fs
 
+// async function convertTXTtoString() {
+//     // Nome do arquivo que você deseja ler
+//     const primeiraString = './txt-files/primeira-string.txt';
+//     const segundaString = './txt-files/segunda-string.txt';
+
+//     try {
+//         // Lê o conteúdo do primeiro arquivo de forma assíncrona
+//         const data1 = await fs.readFile(primeiraString, 'utf8');
+//         console.log('Conteúdo do primeiro arquivo:', data1);
+
+//         // Lê o conteúdo do segundo arquivo de forma assíncrona
+//         const data2 = await fs.readFile(segundaString, 'utf8');
+//         console.log('Conteúdo do segundo arquivo:', data2);
+
+//         console.log('Leitura de arquivos concluída.');
+//     } catch (err) {
+//         console.error('Erro ao ler o arquivo:', err);
+//     }
+// }
+
+// module.exports = {
+//     convertTXTtoString,
+// };
 
 // Função principal para encontrar a Maior Subsequência Comum (LCS)
 function longestCommonSubsequence(text1, text2) {
@@ -31,7 +54,7 @@ function longestCommonSubsequence(text1, text2) {
 
     // Teste função convertTXTtoString
     console.log("\n teste convertTXTtoString: ");
-    convertTXTtoString();
+    //convertTXTtoString();
 
     // Chama a função auxiliar para obter a subsequência
     return subSequence(text1, text2, dpTable);
